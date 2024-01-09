@@ -8,6 +8,15 @@
     "mongodb": "^5.9.2",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.0"
-  }
+  },
+  "name": "gymvms",
+  "description": "",
+  "version": "1.0.0",
+  "main": "assignment.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "assignment.js"
+  },
+  "author": "",
+  "license": "ISC"
 }
-
