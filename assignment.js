@@ -10,13 +10,6 @@ const mongouri = process.env.Mongodb;
 //express.json
 app.use(express.json())
 
-// app.use(express.static(path.join(__dirname,'public')));
-
-// app.get('/',(req, res) =>{
-//     res.sendFile(path.join(__dirname,'public', 'login.html'));
-// });
-
-
 
 // MongoDB setup
 const { MongoClient } = require('mongodb');
