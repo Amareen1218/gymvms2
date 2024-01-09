@@ -13,9 +13,9 @@
   "name": "gymvms",
   "description": "",
   "version": "1.0.0",
-  "main": "node assignment.js",
+  "main": "assignment.js",
   "scripts": {
-    "start": "assignment.js"
+    "start": "node assignment.js"
   },
   "author": "",
   "license": "ISC",
