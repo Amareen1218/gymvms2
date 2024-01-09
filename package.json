@@ -13,7 +13,7 @@
   "name": "gymvms",
   "description": "",
   "version": "1.0.0",
-  "main": "assignment.js",
+  "main": "node assignment.js",
   "scripts": {
     "start": "assignment.js"
   },
