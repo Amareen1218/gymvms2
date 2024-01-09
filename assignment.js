@@ -10,13 +10,20 @@ const mongouri = process.env.Mongodb;
 //express.json
 app.use(express.json())
 
+// app.use(express.static(path.join(__dirname,'public')));
+
+// app.get('/',(req, res) =>{
+//     res.sendFile(path.join(__dirname,'public', 'login.html'));
+// });
+
+
 
 // MongoDB setup
 const { MongoClient } = require('mongodb');
 const uri = 'mongodb+srv://amareen:4252621812-aA@cluster0.cihdsmn.mongodb.net/';
 
 const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('./swagger.json');
+const swaggerDocument = require('./swagger.js');
 app.use(cors());
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
