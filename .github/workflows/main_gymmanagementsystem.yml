@@ -53,4 +53,4 @@ jobs:
           app-name: 'gymmanagementsystem'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C4F40488B0DF4EFCB3FB428927B32828 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3A76744902B7431480A792BDA2FDBFFD }}
