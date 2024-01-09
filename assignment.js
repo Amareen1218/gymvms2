@@ -1,30 +1,17 @@
 const { error } = require('console');
-const express = require('express');
-const app = express();
+const express = require('express')
+const app = express()
 const port =  process.env.PORT || 2000;
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
-const path = require('path'); 
-const mongouri = process.env.Mongodb;
+// const bcrypt = require('bcrypt');
 
 //express.json
 app.use(express.json())
 
-// app.use(express.static(path.join(__dirname,'public')));
-
-// app.get('/',(req, res) =>{
-//     res.sendFile(path.join(__dirname,'public', 'login.html'));
-// });
-
-
-
 // MongoDB setup
 const { MongoClient } = require('mongodb');
 const uri = 'mongodb+srv://amareen:d5D4Ir1dT6PbLups@cluster0.cihdsmn.mongodb.net/?retryWrites=true&w=majority';
-
-// const swaggerUi = require('swagger-ui-express');
-// app.use(cors());
-const swaggerDocument = require('./swagger.js');
 
 const swaggerUi = require('swagger-ui-express');
 
@@ -39,10 +26,9 @@ const options = {
   },
   apis: ['./swagger.js'],
 };
+
 const swaggerSpec = swaggerJsdoc(options);
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-
-
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 //const client = new MongoClient(uri);
 
@@ -60,8 +46,7 @@ MongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   viewCollection = db.collection('viewCollection');
   //securityCollection = db.collection('securityCollectionName');
   hostCollectionName = db.collection('hostCollectionName');
-  
-  
+
   // Start the server or perform other operations
 
   const { ObjectId } = require('mongodb');
