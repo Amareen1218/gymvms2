@@ -23,8 +23,8 @@ const { MongoClient } = require('mongodb');
 const uri = 'mongodb+srv://amareen:d5D4Ir1dT6PbLups@cluster0.cihdsmn.mongodb.net/?retryWrites=true&w=majority';
 
 // const swaggerUi = require('swagger-ui-express');
-// const swaggerDocument = require('./swagger.js');
 // app.use(cors());
+const swaggerDocument = require('./swagger.js');
 
 const swaggerUi = require('swagger-ui-express');
 
