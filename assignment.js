@@ -25,6 +25,20 @@ const uri = 'mongodb+srv://amareen:d5D4Ir1dT6PbLups@cluster0.cihdsmn.mongodb.net
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.js');
 app.use(cors());
+
+const swaggerUi = require('swagger-ui-express');
+
+const swaggerJsdoc = require('swagger-jsdoc');
+const options = {
+  definition: {
+    openapi: '3.0.0',
+    info: {
+      title: 'Gym Fitness Management',
+      version: '1.0.0',
+    },
+  },
+  apis: ['./swagger.js'],
+};
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 
